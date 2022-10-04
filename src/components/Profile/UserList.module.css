@@ -1,0 +1,26 @@
+.control {
+
+    font-family: 'metal-mania';
+    text-align: center;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .label {
+    font-weight: bold;
+    text-indent: 4em;
+    text-align: center;
+    
+    
+    
+    display: flex;
+  }
+  .li{
+    list-style: none;
+    
+  }
+  .p{
+    text-indent: 3em;
+
+  }

@@ -1,0 +1,26 @@
+Server side sessions/Authentication tokens are used for the purpose of ApI lock for authentication 
+
+Server side sessions:
+It stores unique identifier on the server and sends the same identifier to the client 
+client sends identifier along with requests to protected resources.
+note:It works great if your backend, your server and your front end are tightly coupled(all the API should be 
+connected to the same server )
+loose coupling:the frontend and the backend API's are connected in different servers.
+Authentication tokens:
+It works better in fexible environment (loose coupling) as SPA requires multiple servers 
+for connecting different API'S
+After the validation with email and password it creates token-but not store (token-a long string with data encoded)
+permission token on server and sends token to client.
+The token will be geenerated by the server with a key used to hash the data as a string (that is only known by 
+the server) if the token was faked with a different key apart from the server generated key,then 
+the server will deny the access .the process is called decoupling in frontend and backend.
+
+"Authentication Tokens", these tokens are typically created in the "JSON Web Token" Format (JWT).
+
+To protect the frontend pages the navigation guards are used(eg:only the registered user can make 
+changes after logging in the account and not just by visitng the pages manually if not authenticated )
+
+
+firebase auth can store the sign up or sign in token only for an hour and then it expires where the user 
+has to login again 
+storing in local storage will cause some vulnerablarities if there is a cross side scripting 

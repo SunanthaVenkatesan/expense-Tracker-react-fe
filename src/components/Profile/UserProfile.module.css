@@ -1,0 +1,11 @@
+.profile {
+  margin: 3rem auto;
+  text-align: center;
+  color: rgb(57, 53, 53);
+
+}
+
+.profile h1 {
+  font-size: 2rem;
+  font-family: 'metal mania';
+}
